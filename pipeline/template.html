@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NEAR Thesis Dashboard - IndiciaDesk</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>body{font-family:system-ui;background:#0b0e14;color:#e6e6e6;max-width:1100px;margin:auto;padding:20px}a{color:#00ec97}
+table{border-collapse:collapse;width:100%;font-size:13px;margin:12px 0}td,th{border:1px solid #333;padding:6px}tr.ok td:nth-child(6){color:#00ec97}tr.no td:nth-child(6){color:#ff6b6b}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:16px}.c{background:#131722;padding:10px;border-radius:8px}.c p{font-size:12px;color:#aaa}h1 span{color:#00ec97}</style></head><body>
+<h1>NEAR long-term thesis: <span>{{SCORE}}</span> claims bullish</h1>
+<p>Evidence-first, falsifiable claims re-scored from public data on every build. Data fetched {{TS}}. Built at NEAR HACKATHON by <a href="https://indiciadesk.com">IndiciaDesk</a> · <a href="https://github.com/Lvalentine16/near-thesis-indiciadesk">repo</a> · <a href="https://github.com/Lvalentine16/near-thesis-indiciadesk/blob/main/THESIS.md">THESIS.md</a></p>
+<h2>Scorecard</h2><table><tr><th>ID</th><th>Claim</th><th>Metric</th><th>Value</th><th>Threshold</th><th>Verdict</th><th>Proves wrong</th></tr>{{ROWS}}</table>
+<h2>Valuation vs peers</h2><table><tr><th>Chain</th><th>Mcap</th><th>Chain fees 1y</th><th>P/F</th><th>TVL</th><th>MC/TVL</th></tr>{{PEERS}}</table>
+<div class="g" id="g"></div>
+<script>const C={{CHARTS}};for(const[k,[x,y,t,d]]of Object.entries(C)){const e=document.createElement('div');e.className='c';e.innerHTML=`<h3>${t}</h3><canvas id="${k}"></canvas><p>${d}</p>`;g.appendChild(e);
+new Chart(document.getElementById(k),{type:'line',data:{labels:x,datasets:[{data:y,borderColor:'#00ec97',pointRadius:0,borderWidth:1.5}]},options:{plugins:{legend:{display:false}},scales:{x:{ticks:{maxTicksLimit:6,color:'#888'}},y:{ticks:{color:'#888'}}}}})}</script>
+</body></html>

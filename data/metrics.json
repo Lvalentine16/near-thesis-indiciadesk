@@ -1,0 +1,183 @@
+{
+ "fetched_utc": "2026-11-01T09:02:59Z",
+ "last_day": "2026-10-31",
+ "aa_90d": 71890.4,
+ "aa_prev90d": 107548.22222222222,
+ "aa_365d_ago_90d": 300542.3222222222,
+ "tx_90d": 737899.1777777778,
+ "tx_prev90d": 784904.8444444444,
+ "tx_365d_ago_90d": 4730166.033333333,
+ "supply_now": 1310472976.2021549,
+ "supply_1y_ago": 1278798435.4156814,
+ "net_inflation_1y_pct": 2.4768986189897424,
+ "fees_near_1y": 618022.55810504,
+ "fees_vs_supply_change_pct": 1.9511650137922887,
+ "staked_near": 591910330.8095223,
+ "validators": 373,
+ "staked_pct": 45.167686900718934,
+ "tvl_now": 200061756,
+ "tvl_1y_ago": 154096970,
+ "stables_now": 128978935.33,
+ "stables_1y_ago": 226095189,
+ "intents_30d": 3860604916,
+ "intents_prev30d": 4796810512,
+ "intents_1y": 32870828202,
+ "intents_alltime": 36011422884,
+ "nearcore_commits_12w": 341,
+ "nearcore_commits_prev12w": 375,
+ "hl_oi_usd": 236287042.24803984,
+ "hl_funding_ann_pct": 10.950000000000001,
+ "hl_funding_30d_ann_pct": 11.0686118016,
+ "peers": {
+  "near": {
+   "mcap": 5763572127,
+   "fdv": 5763572193,
+   "price": 4.4,
+   "fees_1y": 1210080,
+   "tvl": 200055367.90697548,
+   "p_f": 4762.967842621975,
+   "mc_tvl": 28.809884919858916
+  },
+  "solana": {
+   "mcap": 56539063093,
+   "fdv": 61010430616,
+   "price": 95.8,
+   "fees_1y": 234803686,
+   "tvl": 5435150533.915907,
+   "p_f": 240.79291111724712,
+   "mc_tvl": 10.402483379290112
+  },
+  "sui": {
+   "mcap": 3757121286,
+   "fdv": 9077269291,
+   "price": 0.907704,
+   "fees_1y": 2844435,
+   "tvl": 461486106.39003766,
+   "p_f": 1320.8673378017074,
+   "mc_tvl": 8.141352976777519
+  },
+  "aptos": {
+   "mcap": 561530101,
+   "fdv": 769370963,
+   "price": 0.635549,
+   "fees_1y": 1204720,
+   "tvl": 42370254.224879935,
+   "p_f": 466.1083911614317,
+   "mc_tvl": 13.252932069269198
+  },
+  "avalanche": {
+   "mcap": 3922882033,
+   "fdv": 4158475800,
+   "price": 8.83,
+   "fees_1y": 2789816,
+   "tvl": 545112356.2304039,
+   "p_f": 1406.1436428065506,
+   "mc_tvl": 7.196465073967075
+  }
+ },
+ "near_pf_rank": 5,
+ "claims": [
+  {
+   "id": "C1",
+   "side": "bull",
+   "claim": "NEAR Intents settles volume far larger than NEAR's own DeFi",
+   "metric": "Intents 1y volume / NEAR chain TVL (x)",
+   "value": 164.30340740386183,
+   "threshold": "> 50x",
+   "bullish": true,
+   "falsifier": "1y Intents volume below 50x chain TVL"
+  },
+  {
+   "id": "C1b",
+   "side": "bull",
+   "claim": "Intents volume momentum is positive",
+   "metric": "Intents volume, last 30d vs prior 30d (%)",
+   "value": -19.51725200855714,
+   "threshold": "> 0%",
+   "bullish": false,
+   "falsifier": "30d volume below prior 30d"
+  },
+  {
+   "id": "C2",
+   "side": "bull",
+   "claim": "Usage is growing: daily active accounts up year over year",
+   "metric": "Active accounts, 90d avg vs same window 1y ago (%)",
+   "value": -76.0797748987765,
+   "threshold": "> +10%",
+   "bullish": false,
+   "falsifier": "90d avg active accounts below the 1y-ago level"
+  },
+  {
+   "id": "C3",
+   "side": "bull",
+   "claim": "Transactions are growing year over year",
+   "metric": "Txns/day, 90d avg vs 1y ago (%)",
+   "value": -84.40014213924363,
+   "threshold": "> +10%",
+   "bullish": false,
+   "falsifier": "90d avg txns below 1y-ago level"
+  },
+  {
+   "id": "C4",
+   "side": "bear",
+   "claim": "Fees do not offset issuance: NEAR is not deflationary",
+   "metric": "Fees paid in 1y as % of net supply growth",
+   "value": 1.9511650137922887,
+   "threshold": "bull only if >= 100%",
+   "bullish": false,
+   "falsifier": "fees reach >=100% of net new supply"
+  },
+  {
+   "id": "C5",
+   "side": "bull",
+   "claim": "Stablecoin liquidity on NEAR is growing",
+   "metric": "Stablecoin supply vs 1y ago (%)",
+   "value": -42.953701978152225,
+   "threshold": "> +20%",
+   "bullish": false,
+   "falsifier": "stablecoin supply below 1y-ago level"
+  },
+  {
+   "id": "C6",
+   "side": "bear",
+   "claim": "Onchain TVL is not growing",
+   "metric": "DefiLlama NEAR TVL vs 1y ago (%)",
+   "value": 29.828481377667583,
+   "threshold": "bull only if > 0%",
+   "bullish": true,
+   "falsifier": "TVL above 1y-ago level"
+  },
+  {
+   "id": "C7",
+   "side": "bear",
+   "claim": "Valuation is rich vs peers on fees",
+   "metric": "P/F (mcap / 1y chain fees), rank among 5 L1s (1 = cheapest)",
+   "value": 5,
+   "threshold": "bull only if rank <= 2",
+   "bullish": false,
+   "falsifier": "NEAR ranks in the 2 cheapest by P/F"
+  },
+  {
+   "id": "C8",
+   "side": "bull",
+   "claim": "Core development stays active",
+   "metric": "nearcore commits last 12w vs prior 12w (%)",
+   "value": -9.066666666666666,
+   "threshold": "> -25%",
+   "bullish": true,
+   "falsifier": "commits drop >25% vs prior 12w"
+  },
+  {
+   "id": "C9",
+   "side": "bull",
+   "claim": "Derivatives positioning is not crowded long",
+   "metric": "Hyperliquid NEAR funding, 30d avg annualized (%)",
+   "value": 11.0686118016,
+   "threshold": "< 15% (default ~11%)",
+   "bullish": true,
+   "falsifier": "30d funding > 15% annualized (crowded longs)"
+  }
+ ],
+ "score": 4,
+ "score_max": 10
+}
